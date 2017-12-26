@@ -12,6 +12,10 @@ The most straight forward way to install all dependencies is to use pip to insta
 
 		`pip install -r req.txt`
 
+## Run
+
+Open terminal in the EKF_SLAM directory and run `jupyter notebook` command. Start the SLAM.ipynb in the browser window that opens.
+
 ![gif](figures/EKF.gif)
 
 

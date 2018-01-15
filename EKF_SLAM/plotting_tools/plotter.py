@@ -10,7 +10,10 @@ def plot_landmarks(landmarks,color='k',marker='*'):
 
 def draw_ellipse(position, covariance, alpha = 0.9, ax=None, **kwargs):
     """Draw an ellipse with a given position and covariance"""
-    ax = ax or plt.gca()
+    if(ax==None):
+        ax = plt.gca()
+    else:
+        ax = ax
     
     # Extracting Values
     sxx = covariance[0][0]    # sigmax
@@ -59,7 +62,7 @@ def draw_ellipse(position, covariance, alpha = 0.9, ax=None, **kwargs):
         height = major
         
     # Drawing ellipse.
-    ax.add_patch(Ellipse(position,width=width,height=height,angle=angle,fill=False,lw=0.5,alpha=0.6,label='prob'))
+    ax.add_patch(Ellipse(position,width=2*width,height=2*height,angle=angle,fill=False,lw=0.5,alpha=0.6,label='prob'))
     
 
 # Plotting Robot,
